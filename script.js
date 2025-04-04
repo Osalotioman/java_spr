@@ -56,18 +56,6 @@ function populateTable() {
         tableBody.insertAdjacentHTML('beforeend', row);
         ++uid;
     });
-/*
-    const tableBody_pts = document.getElementById('ptsb');
-    const sortedUsers_pts = pts.sort((a, b) => b.rating - a.rating);
-    uid = 1;
-    sortedUsers_pts.forEach(pt => {
-        const adjustedRating_pts = 1400 - pt.rating;
-        const profileLink_pts = `https://codeforces.com/profile/${pt.handle}`;
-        const row_pts = `<tr><td>${uid}</td><td>${pt.name}</td><td>${pt.rating}</td><td>${adjustedRating_pts}</td><td><a href="${profileLink_pts}" target="_blank">Profile</a></td></tr>`;
-        tableBody_pts.insertAdjacentHTML('beforeend', row_pts);
-        ++uid;
-    });
-*/
 }
 
 async function initialize() {
