@@ -34,7 +34,7 @@ function populateTable() {
     sortedUsers.forEach(user => {
         const adjustedRating = 1200 - user.rating;
         const profileLink = `https://codeforces.com/profile/${user.handle}`;
-        const row = `<tr><td>${uid}</td><td>${user.name}</td><td>${user.rating}</td><td>${adjustedRating}</td><td><a href="${profileLink}" target="_blank">Profile</a></td></tr>`;
+        const row = `<tr><td>${uid}</td><td>${user.name}</td><td>${user.rating}</td><td>${adjustedRating}</td><td><a href="${profileLink}" target="_blank">Profile</a></td><td>${user.team}</td></tr>`;
         tableBody.insertAdjacentHTML('beforeend', row);
         ++uid;
     });
