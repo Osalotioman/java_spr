@@ -1,23 +1,12 @@
 const users = [
-    { name: 'Emmanuel', handle: 'OsazuwaEmmanuel', rating: 466, uni: 'uniben', team: '#Terminal'},
-    { name: 'Minerva', handle: 'Minerva2005', rating: 867, uni: 'uniben', team: '#Terminal'},
-    { name: 'Obinna', handle: 'Turing_apple', rating: 867 },
-    { name: 'Anthony', handle: 'python_tamer', rating: 1052},
-    { name: 'Cyberdude', handle: 'cyberdude', rating: 742 },
-    { name: 'Otutochi', handle: 'Otuz', rating: 620},
-    { name: 'Cryptickid91', handle: 'cryptickid91', rating: 884 },
-    { name: 'Ola', handle: 'Anubis11111', rating: 0 },
-    { name: 'Brainiac Prime', handle: 'iminaboroberts', rating: 0 },
-    { name: 'Paul', handle: 'eroblaze', rating: 0 },
-    { name: 'BrainiacPrimeChi', handle: 'iminaboroberts', rating: 0}
-];
-
-const pts = [
-    {name: '<b style="color:#008000;">TechWiz</b>', handle: '0x000022', rating: 1187},
-    {name: '<b style="color:#03A89E;">Eti-ini</b>', handle: 'randombernie', rating: 1375},
-    {name: '<b style="color:#008000;">Dreadedhippy</b>', handle: 'dreadedhippy', rating: 1310},
-    {name: '<b style="color:#03A89E;">Ehijoe</b>', handle: 'ehijoe', rating: 1345},
-    { name: '<b style="color:#03A89E;">Genesis</b>', handle: 'daveshub', rating: 948, uni: 'uniben', team: '#Terminal'}
+    { name: 'Purple', handle: '10billleo', rating: 0, uni: 'uniben', team: 'unknown' },
+    { name: 'Unknown', handle: 'Alex00029', rating: 0, uni: 'uniben', team: 'unknown' },
+    { name: 'Unknown', handle: 'BillionaireD', rating: 0, uni: 'uniben', team: 'unknown' },
+    { name: 'Unknown', handle: 'Blaqjay', rating: 0, uni: 'uniben', team: 'unknown' },
+    { name: 'Minerva', handle: 'DisqualifiedAsAHuman', rating: 0, uni: 'uniben', team: '#Terminal' },
+    { name: 'Unknown', handle: 'Klever01', rating: 0, uni: 'uniben', team: 'unknown' },
+    { name: 'Marianne', handle: 'Mara_Andrea', rating: 0, uni: 'uniben', team: 'unknown' },
+    { name: 'Osalotioman', handle: 'Osalotioman', rating: 0, uni: 'uniben', team: '#Terminal' }
 ];
 
 async function fetchRatings(handles) {
@@ -29,19 +18,12 @@ async function fetchRatings(handles) {
 
 async function updateUserRatings() {
     const userHandles = users.map(user => user.handle);
-    const ptsHandles = pts.map(pt => pt.handle);
 
     const userRatings = await fetchRatings(userHandles);
-    const ptsRatings = await fetchRatings(ptsHandles);
 
     userRatings.forEach(ratingInfo => {
         const user = users.find(u => u.handle === ratingInfo.handle);
         if (user) user.rating = ratingInfo.rating;
-    });
-
-    ptsRatings.forEach(ratingInfo => {
-        const pt = pts.find(p => p.handle === ratingInfo.handle);
-        if (pt) pt.rating = ratingInfo.rating;
     });
 }
 
