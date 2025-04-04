@@ -1,6 +1,6 @@
 const users = [
     { name: 'Purple', handle: '10billleo', rating: 0, uni: 'uniben', team: 'unknown' },
-    { name: 'Unknown', handle: 'Alex00029', rating: 0, uni: 'uniben', team: 'unknown' },
+    { name: 'Alex', handle: 'Alex00029', rating: 0, uni: 'uniben', team: 'unknown' },
     { name: 'Unknown', handle: 'BillionaireD', rating: 0, uni: 'uniben', team: 'unknown' },
     { name: 'Unknown', handle: 'Blaqjay', rating: 0, uni: 'uniben', team: 'unknown' },
     { name: 'Minerva', handle: 'DisqualifiedAsAHuman', rating: 0, uni: 'uniben', team: '#Terminal' },
